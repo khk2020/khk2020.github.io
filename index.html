@@ -1,15 +1,335 @@
 <!doctype html>
 <html lang="ko" class="no-js">
 <head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width">
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<script type="text/javascript">// function hello() { alert ("HELLO"); }</script>
+<style type="text/css">
+	
+@import url(http://fonts.googleapis.com/earlyaccess/nanumbrushscript.css);
+@import url(http://fonts.googleapis.com/earlyaccess/nanummyeongjo.css);
+@import url(http://fonts.googleapis.com/earlyaccess/notosanskr.css);
+
+body{font-family: 'Noto Sans KR', sans-serif !important;}
+body { margin : 0; padding : 0; color: #666 !important; line-height:1.7em !important;}
+p {
+    margin: 0 0 15px !important;
+    line-height: 1.7em !important;
+    color: #666 !important;
+}
+
+/*for gnb area*/
+	#stickymenu .col-md-3.col-sm-4.col-xs-12 {
+		width: 20%;
+	}
+	.col-md-9.col-sm-8.col-xs-12.nav-wrap {
+		width: 80%;
+		padding: 0;
+	}
+	/*img.logo {
+		width: 100%;
+	}*/
+
+	.nav-wrap .container-fluid{padding-left:0 !important; padding-right:0 !important;}
+	.nav-wrap div#responsive-menu{padding-left:0 !important; padding-right:0 !important;}
+
+	/*.navbar{margin-top:4px !important;}*/
+
+	.navbar-nav li a {
+		padding: 5px 8px !important;
+		font-size: 15px !important;
+		font-weight: 900;
+	}
+	.navbar-nav li .sub-menu > li > a {
+		font-size: 13px !important;
+		padding: 10px !important;
+	}
+	/*.navbar-nav li .sub-menu > li > a:hover{
+		font-weight:800;
+	}*/
+	.navbar-nav li a:hover{
+		color:#13293d !important;
+		background-color:transparent !important;
+	}
+	.navbar-nav li .sub-menu a:hover{
+		color:#fff !important;
+		background-color:#020b13 !important;
+	}
+	.current-menu-parent{
+		background-color:#13293d;
+	}
+	.current_page_ancestor a{color:#fff !important;}
+	/*.current-menu-parent a:hover{
+		color:#fff !important;
+	}*/
+	.nav-list .current-menu-parent a:hover {
+		color: #fff !important;
+	}
+	.page .header-transparent {
+		display: none;
+	}
+	.home .header-transparent {
+		display: block;
+	}
+	.home .header-transparent .container-fluid{padding-left:0 !important; padding-right:0 !important;}
+/*for gnb area*/
+
+/*for body area*/
+	main{padding-top:0 !important;}
+	#titleBg {
+		background-color: #f4f4f4;
+		background-image: url(/wp-content/uploads/2016/06/sub-tit.jpg);
+		background-repeat: no-repeat;
+		background-position: left 44% !important;
+		background-size: 100% 100%;
+		height: 140px;
+	}
+	.pageTitle {
+		vertical-align: middle;
+		padding: 0 !important;
+		max-height: 80px;
+	}
+	.pageTitle h1 {
+		font-size: 35px;
+		text-align: left;
+		display: inline-block;
+		padding-top: 1% !important;
+		margin-bottom: 0 !important;
+		color: #fff;
+		font-family: 'Noto Sans KR', sans-serif;
+	}
+	.bread {
+		font-size: 12px;
+		color: #d8d8d8;
+		line-height: 2.5em;
+		font-weight: normal;
+		display: inline-block;
+		float: right;
+		padding-top: 2%;
+		vertical-align: middle;
+	}
+	.bread .now {
+		font-size: 12px;
+		color: #fff;
+		line-height: 2.5em;
+		font-weight: 600;
+	}
+	/*borderbox*/
+	.borderBox.W{
+		width: 100%;
+		overflow: hidden;
+		border: 1px solid #2b4f91;
+		background-color: #fff;
+		padding: 2% 4% 2% 1.5%;
+		
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		margin: 0 !important;
+	}
+	.borderBox.W p {
+		line-height: 1.8em !important;
+	}
+	
+	.borderBox.W .vc_icon_element.vc_icon_element-outer .vc_icon_element-inner.vc_icon_element-size-xl.vc_icon_element-have-style-inner {
+		width: 8em!important;
+		height: 8em!important;
+	}
+	
+	.borderBox.BL {
+		width: 100%;
+		overflow: hidden;
+		border: 1px solid rgba(43,79,145,1);
+		padding: 0 2% !important;
+		color: #fff;
+		background-color: rgba(43,79,145,1);
+	}
+	.borderBox.BL p {
+		font-size: 1.3em !important;
+		line-height: 1.7em !important;
+	}
+	span.sign {
+		font-family: 'Nanum Brush Script', cursive !important;
+		/* font-family: 'Nanum Myeongjo', serif; */
+		font-size: 3em;
+		font-style: italic;
+		vertical-align: middle;
+	}
+	
+	.subTitBtm {
+		font-size: 1.5em;
+		font-weight: 900;
+		background-color: transparent;
+		background-image: url(/wp-content/uploads/2016/06/sub-tit-btm.png);
+		background-position: center bottom;
+		background-repeat: no-repeat;
+		padding-bottom: 25px;
+	}
+	
+	h6.bulTit{
+		background-color: transparent;
+		background-image: url(/wp-content/uploads/2016/06/bul-image.png);
+		background-repeat: no-repeat;
+		background-position: left center;
+		padding-left: 25px;
+		text-align: left;
+		color: #2b4f91;
+		font-size: 1.5em;
+		font-weight: 800;
+		line-height: 1.5em;
+		padding-top: 0 !important;
+		margin-top: 0 !important;
+	}
+	
+	/*conatct*/
+		.darkform2 h6 {
+			font-size: 1em;
+			color: #FBFF01 !important;
+		}
+		.darkform2 input[type=text], .darkform2 input[type=tel], .darkform2 input[type=email], .darkform2 input[type=password], .darkform2 input[type=url], .darkform2 textarea, .darkform2 textarea.form-control{
+			padding: 7px 20px 7px 45px !important;
+			font-size: 1em !important;
+			height:auto !important;
+		}
+		.darkform2 input.wpcf7-form-control.wpcf7-submit.btn.btn-default {color: #fff !important;}
+		.darkform2 input.wpcf7-form-control.wpcf7-submit.btn.btn-default:hover {border-color: #fff !important;}
+		
+		.bank {
+			background-color: #2b4f91;
+			padding: 20px;
+		}
+	/*conatct*/
+	
+	
+	.smile_icon_list.with_bg .icon_list_icon{background:transparent !important;}
+    .noticeDate {
+        font-size: 0.5em;
+        color: #b1b1b1;
+        padding: 15px 15px !important;
+        margin: 0 !important;
+        line-height: 0.3em !important;
+        background: #f4f4f4;
+    }	
+    .noticeBox{border:1px solid #f4f4f4;}
+    
+    .postpage {border-top: 2px solid #2b4f91;}
+    .content-area.single{margin:0 !important;}
+    h1.entry-title {
+        background: #f4f4f4;
+        padding: 15px 30px;
+        font-size: 1.5em;
+        text-align: left;
+    }
+	
+/*for body area*/
+
+/*for element*/
+	.nomg{margin-bottom:0 !important;}
+/*for element*/
+
+
+/*for footer area*/
+	section.meta {
+		padding: 27px 0 0px 0;
+		position: relative;
+		margin-top:60px;
+	}
+	.footer{display:none;}
+	.footer-b {
+		padding: 15px 0 5px !important;
+		background: #18191b;
+	}
+	a.btns {
+		font-size: 10px;
+		vertical-align: top;
+		display: inline-block;
+		float: right;
+		padding-right: 1%;
+		color: #666;
+	}
+	.page-id-696 section.meta{margin-top: -60px;}
+	
+	aside#text-2 {
+		width: 100%;
+		overflow: hidden;
+	}
+	.flogo {
+		width: 20%;
+		float: left;
+		overflow: hidden;
+		padding-top: 20px;
+	}
+	.ftxt{
+		width:80%;
+		float:left;
+		overflow:hidden;
+		color:#fff;
+	}
+	.ftxt h5{
+		font-weight: 800;
+		font-size: 1.3em;
+		color: #fff;
+		margin-bottom: 15px;
+		text-align: left;
+		line-height: 0;
+		padding: 0;
+	}
+	.ftxt p {
+		color: #afafaf !important;
+		font-size: 13px;
+		font-weight: normal !important;
+	}
+	.footer-b p{font-size:12px !important;}
+/*for footer area*/
+
+
+/*for media query*/
+	@media only screen and (max-width:640px){
+		
+		.pageTitle h1 {
+			display: block;
+		}
+		.bread {
+			display:block;
+			width:100%;
+			text-align:left;
+			padding-top:0;
+		}
+		
+        #stickymenu .col-md-3.col-sm-4.col-xs-12 {
+            width: 100% !important;
+        }
+        .col-md-9.col-sm-8.col-xs-12.nav-wrap{width:95% !important; float:left; clear:both;}
+        ul.nav.navbar-nav.nav-list{background-color:rgba(19,41,61,1);}
+        .top .col-md-3.col-sm-6.col-xs-12{width:50%; padding:0;}
+        .top .col-md-3.col-sm-6.col-xs-12 p{margin-bottom:0 !important;}
+        .page .borderBox.W{margin-bottom:0 !important;}
+        .flogo{width:100%; text-align:left;}
+        .ftxt{width:100%;}
+	}
+	
+/*for media query*/</style>
 
 <title>행정사 김경환</title>
 
-<script type="text/javascript">
-</script>
+<script>
+/* You can add more configuration options to webfontloader by previously defining the WebFontConfig with your options */
+if ( typeof WebFontConfig === "undefined" ) {
+    WebFontConfig = new Object();
+}
+WebFontConfig['google'] = {families: ['Noto+Sans:400,700']};
 
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0">
+(function() {
+    var wf = document.createElement( 'script' );
+    wf.src = 'https://ajax.googleapis.com/ajax/libs/webfont/1.5.3/webfont.js';
+    wf.type = 'text/javascript';
+    wf.async = 'true';
+    var s = document.getElementsByTagName( 'script' )[0];
+    s.parentNode.insertBefore( wf, s );
+})();
+</script>
+                        
 
 </head>
 <body>
@@ -36,6 +356,11 @@
     <!-- End Contact Section -->
 
   </main><!-- End #main -->  
+  
+<div class="wpb_wrapper">
+<p>저희 <b>삼경 행정사 사무소</b>는 고도의 전문화된 인력과 다양한 업무 경험을 바탕으로 인허가 등을 받기 위하여 행정기관에 신청 • 청구하는 업무를 대리해드림으로써 고객 여러분의 짐을 덜어 드리겠습니다.</p>
+<p>대표 행정사는 다양한 종류의 비영리 법인 설립에 관하여 매우 많은 인허가 경험을 가지고 있어서 고객의 요구에 맞추어 대응해 드릴 것입니다.</p>
+</div>  
 	
   <!-- ======= Footer ======= -->
   <footer id="footer">
